@@ -18,6 +18,9 @@ O banco de dados foi modelado para atender às necessidades de um sistema de e-c
 
 ## AÇÕES
 
+![Diagrama ERD](ecommerce_Final.png)
+
+
 - Implementado na entidade Cliente, o campo tipoCliente ENUM('PF', 'PJ'), fazendo com que o tipo seja definido na mesma tabela, se ele é pessoa física ou jurídica. Além disso, futuramente, implementarei algumas regras para que, ao escolher "PF", o campo Identificação permita apenas 11 caracteres, e se for escolhido "PJ", o campo permita 14 caracteres. Sobre a validação de DV, eu ainda não tenho conhecimento, mas irei me aprofundar nisso.
 
 - Criada a entidade FormaPagamento, e relacionada em 1:n com clientes. No caso, um cliente pode ter várias formas de pagamento, e várias formas de pagamento podem compor a "carteira" do cliente. Essa nova entidade também foi relacionada à tabela Pedido, no caso de existir alguma forma de pagamento pontual relacionada diretamente ao pedido.
